@@ -2,9 +2,10 @@ Step 1: Set Up Kubernetes
 Choose a local Kubernetes environment like Minikube or Kind.
 
 Minikube Setup:
-'''bash
+
 
 # Install Minikube
+'''bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 '''
