@@ -1,11 +1,11 @@
 # Kubernetes Application Deployment with Monitoring
 Welcome to this interactive guide! This project demonstrates how to deploy a sample application using Helm charts on a Kubernetes cluster (Minikube) and implement basic monitoring with Prometheus and Grafana.
 
-# Project Objectives
+## Project Objectives
 Deploy an application on a local Kubernetes cluster using Helm charts.
 Expose the application locally for easy access.
 Implement basic monitoring using Prometheus and Grafana to monitor application health and performance.
-# Prerequisites
+##  Prerequisites
 Before starting, ensure you have the following installed on your system:
 
 Minikube
@@ -23,7 +23,7 @@ minikube version
 kubectl version --client
 helm version
 ```
-# Step 1: Set Up Kubernetes
+## Step 1: Set Up Kubernetes
 Choose a local Kubernetes environment like Minikube or Kind.
 
 Minikube Setup:
@@ -44,7 +44,7 @@ Enable Ingress Controller
 minikube addons enable ingress
 ```
 
-# Step 2: Install Helm
+## Step 2: Install Helm
 
 Install Helm
 ```bash
@@ -55,7 +55,7 @@ Verify Helm installation
 ```bash
  helm version
 ```
-# Step 3: Create a Helm Chart
+## Step 3: Create a Helm Chart
 Generate a Helm chart for your application:
 
 Create a new Helm chart
@@ -68,7 +68,7 @@ cd myapp
 ```
 
 Deploy the application
-# Step 5: Deploy the Application
+## Step 5: Deploy the Application
 Install Helm Chart:
 
 Deploy the application
@@ -86,7 +86,7 @@ Access via Minikube (if using Minikube)
 ```bash
 minikube service myapp
 ```
-# Step 6: Add Monitoring
+## Step 6: Add Monitoring
 Install Prometheus and Grafana Using Helm:
 
 Add Prometheus Helm repo
@@ -124,7 +124,7 @@ Visit http://localhost:3000, and log in with:
 
 Username: admin
 Password: admin
-# Configure Grafana
+## Configure Grafana
 Add Prometheus as a data source:
 
 Navigate to Configuration > Data Sources in Grafana.
@@ -134,7 +134,7 @@ Import Kubernetes dashboards:
 Go to Dashboard > Import in Grafana.
 Use a dashboard ID like 3119 (Kubernetes cluster monitoring).
 
-# Step 7: Test and Validate
+## Step 7: Test and Validate
 Open the application in your browser (via Minikube service).
 Access Grafana to view application and cluster metrics.
 Ensure metrics like CPU usage, memory, and request rates are visible.
