@@ -2,7 +2,53 @@
 
 This repository contains code and instructions to provision AWS infrastructure using Terraform and deploy a Python application that interacts with the provisioned services. The project supports deployment on **AWS** or **LocalStack** (a local AWS testing environment).
 
+## Objectives
+
+This project aims to:
+
+- Deploy AWS services using Terraform, with support for **AWS** or **LocalStack** (local testing environment).
+- Develop a local application that interacts with these deployed services.
+- Ensure the application is functional and demonstrates interaction with AWS services.
+
+## Functional Requirements
+
+1. Deploy the following AWS services using Terraform:
+   - **S3**: For file storage.
+   - **SQS**: For sending and receiving messages.
+   - **Secrets Manager**: For securely managing sensitive data.
+   - **EC2**: For hosting or integrating the application.
+2. Develop an application in your preferred language (e.g., Python, Go, Node.js) to:
+   - Send and receive messages via SQS.
+   - Upload and retrieve files from S3.
+   - Access sensitive data securely from Secrets Manager.
+   - Utilize EC2 for hosting or integration.
+
 ---
+
+## Infrastructure Setup
+
+### AWS Services Provisioned
+- **S3**: Bucket for storing and retrieving files.
+- **SQS**: Queue for messaging.
+- **Secrets Manager**: Secure storage for sensitive information.
+- **EC2**: Virtual server for hosting the application.
+
+### Tools and Technologies
+- **Terraform**: Infrastructure as Code for resource provisioning.
+- **AWS CLI** or **LocalStack**: To manage AWS resources or emulate AWS services locally.
+- **Python** (or your preferred language): For application development.
+
+---
+
+## Application Development
+
+The application demonstrates:
+- **SQS**: Sending and receiving messages.
+- **S3**: Uploading and downloading files.
+- **Secrets Manager**: Securely retrieving stored secrets.
+- **EC2**: Hosting or interacting with the application.
+
+The application is designed to work both locally and with AWS/LocalStack.
 
 ## Table of Contents
 
@@ -19,7 +65,7 @@ This repository contains code and instructions to provision AWS infrastructure u
 - [FAQ](#faq)
 - [Contributing](#contributing)
 
----
+
 
 ## Overview
 
