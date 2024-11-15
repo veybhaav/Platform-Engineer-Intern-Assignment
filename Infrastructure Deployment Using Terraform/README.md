@@ -1,4 +1,4 @@
-# AWS Infrastructure Deployment with Terraform and Application Interaction
+# Part - 1: AWS Infrastructure Deployment with Terraform and Application Interaction
 
 This repository contains code and instructions to provision AWS infrastructure using Terraform and deploy a Python application that interacts with the provisioned services. The project supports deployment on **AWS** or **LocalStack** (a local AWS testing environment).
 
