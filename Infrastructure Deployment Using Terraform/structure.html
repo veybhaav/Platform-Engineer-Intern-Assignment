@@ -1,0 +1,14 @@
+project/
+├── main.tf              # main Terraform file for defining resources
+├── variables.tf         # to declare and assign values to variables
+├── outputs.tf           # to output key resources like instance IPs, etc.
+├── provider.tf          # to configure AWS provider
+└── modules/
+    ├── s3/
+    │   └── s3.tf        # module for S3 setup
+    ├── sqs/
+    │   └── sqs.tf       # module for SQS setup
+    ├── secrets_manager/
+    │   └── secrets.tf   # module for Secrets Manager setup
+    └── ec2/
+        └── ec2.tf       # module for EC2 setup
