@@ -1,48 +1,68 @@
-# AWS Infrastructure Deployment with Terraform and Application Interaction (Local or Cloud)
-This project guides you to provision AWS infrastructure using Terraform and develop a simple Python application that interacts with the deployed services. It is designed to work with AWS directly or with LocalStack for local testing.
+# AWS Infrastructure Deployment with Terraform and Application Interaction
+
+This repository contains code and instructions to provision AWS infrastructure using Terraform and deploy a Python application that interacts with the provisioned services. The project supports deployment on **AWS** or **LocalStack** (a local AWS testing environment).
+
+---
 
 ## Table of Contents
-Overview
-Project Features
-Pre-requisites
-Project Setup
-Step 1: Clone the Repository
-Step 2: Install Terraform
-Step 3: Configure AWS or LocalStack
-Deploy Infrastructure
-Run the Application
-Clean Up
-FAQs
-Contributing
+
+- [Overview](#overview)
+- [Features](#features)
+- [Pre-requisites](#pre-requisites)
+- [Setup Instructions](#setup-instructions)
+  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
+  - [Step 2: Install Dependencies](#step-2-install-dependencies)
+  - [Step 3: Configure AWS or LocalStack](#step-3-configure-aws-or-localstack)
+- [Deploying Infrastructure](#deploying-infrastructure)
+- [Running the Application](#running-the-application)
+- [Clean-Up](#clean-up)
+- [FAQ](#faq)
+- [Contributing](#contributing)
+
+---
+
 ## Overview
-This project provisions the following AWS resources:
 
-S3 (Simple Storage Service): For storing files.
-SQS (Simple Queue Service): For sending and receiving messages.
-Secrets Manager: For securely storing sensitive information.
-EC2 Instance: A virtual server for running the application.
-A Python application is included to interact with these services. The app:
+The project provisions the following AWS resources:
+- **S3**: For storing files.
+- **SQS**: For sending and receiving messages.
+- **Secrets Manager**: For securely managing sensitive data.
+- **EC2**: A virtual server for running the application.
 
-Uploads and downloads files from S3.
-Sends and retrieves messages from SQS.
-Reads secrets from Secrets Manager.
-## Project Features
-Infrastructure as Code (IaC): Uses Terraform for AWS provisioning.
-Cloud and Local Options: Supports deployment on AWS or locally via LocalStack.
-Interactive Application: A Python app showcasing service interaction.
-Modular Terraform Configuration: Clean, reusable module-based Terraform code.
+The included Python application interacts with these services, demonstrating:
+- Uploading and downloading files from S3.
+- Sending and receiving messages from SQS.
+- Retrieving secrets from Secrets Manager.
+
+---
+
+## Features
+
+1. **Infrastructure as Code**: Uses Terraform for automated provisioning.
+2. **Flexible Deployment**: Supports both AWS and LocalStack.
+3. **Modular Design**: Reusable and clean Terraform code.
+4. **Interactive Application**: Python app showcases real-world AWS interactions.
+
+---
+
 ## Pre-requisites
-Tools and Accounts
-Terraform: Download and install Terraform.
-AWS CLI (for AWS option): Install and configure using AWS CLI setup guide.
+
+### Tools and Accounts
+- **Terraform**: [Download](https://www.terraform.io/downloads)
+- **AWS CLI**: [Install](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)
+- **Python**: Version 3.8 or higher
+- **LocalStack** (optional): For local testing ([Install](https://docs.localstack.cloud/get-started/))  
+
+### Python Dependencies
+Install the required libraries:
+```bash
+pip install boto3
+```
 LocalStack (for local option): Install using Docker:
 ```bash
 pip install localstack
 ```
-Python: Install Python (≥3.8) and the boto3 library:
-```bash
-pip install boto3
-```
+
 AWS Permissions
 Ensure your IAM user or role has permissions for:
 
