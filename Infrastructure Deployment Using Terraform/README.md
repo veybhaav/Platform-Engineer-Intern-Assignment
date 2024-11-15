@@ -152,3 +152,65 @@ provider "aws" {
   access_key  = "mock_key"
   secret_key  = "mock_secret"
 }
+
+## Deploy Infrastructure
+Initialize Terraform
+Run the following to download necessary providers and modules:
+
+```bash
+terraform init
+```
+Validate Configuration
+Validate your Terraform files:
+```bash
+terraform validate
+```
+Provision Resources
+Apply the configuration:
+```bash
+terraform apply -auto-approve
+```
+Terraform will output the following:
+S3 bucket name
+SQS queue URL
+Secret ARN
+EC2 instance ID
+Run the Application
+Set Environment Variables
+Export Terraform outputs as environment variables:
+
+```bash
+export S3_BUCKET_NAME="<s3_bucket_name>"
+export SQS_QUEUE_URL="<sqs_queue_url>"
+export SECRET_NAME="<secret_name>"
+```
+Run the Python Application
+Navigate to the app directory and run the script:
+```
+cd app
+python app.py
+```
+Expected Outputs
+
+S3: File uploaded and downloaded.
+SQS: Message sent and received.
+Secrets Manager: Secret value retrieved.
+Clean Up
+To delete all provisioned resources, run:
+```
+terraform destroy -auto-approve
+```
+## FAQs
+Can I test this project without AWS credentials?
+Yes, use LocalStack for local testing.
+
+What if Terraform commands fail?
+Ensure:
+
+Correct Terraform syntax (terraform validate).
+AWS CLI or LocalStack is configured.
+How can I extend this project?
+Add additional AWS services or enhance the Python app.
+
+## Contributing
+Feel free to fork this repository and create pull requests for improvements.
