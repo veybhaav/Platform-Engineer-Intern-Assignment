@@ -60,13 +60,33 @@
 
 ---
 
-## Deployment Instructions
+# Application Deployment on Kubernetes Using Helm
 
-### Pre-requisites
-- Install **Terraform**: [Terraform Installation Guide](https://www.terraform.io/downloads)
-- Install **AWS CLI** or **LocalStack** for emulating AWS services:  
-  - [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html)  
-  - [LocalStack Installation Guide](https://docs.localstack.cloud/get-started/)
-- Configure AWS credentials:
-  ```bash
-  aws configure
+## Objectives
+
+- Deploy an application on a Kubernetes cluster using **Helm charts**.
+- Implement **basic monitoring** for the deployed application.
+- Ensure the application is accessible locally via the Kubernetes cluster.
+
+---
+
+## Functional Requirements
+
+1. Set up a Kubernetes cluster using tools like **Minikube** or **Kind**.
+2. Configure and use **Helm charts** to deploy the application.
+3. Expose the application locally via Kubernetes services such as **NodePort** or **Ingress**.
+4. Implement basic monitoring to gather insights into the application’s health and performance.
+
+---
+
+## Kubernetes Setup
+
+### Prerequisites
+1. Install **kubectl**: [Install kubectl](https://kubernetes.io/docs/tasks/tools/)
+2. Install a local Kubernetes environment:
+   - **Minikube**: [Minikube Installation Guide](https://minikube.sigs.k8s.io/docs/start/)
+   - **Kind**: [Kind Installation Guide](https://kind.sigs.k8s.io/docs/user/quick-start/)
+3. Install **Helm**: [Helm Installation Guide](https://helm.sh/docs/intro/install/)
+
+---
+
