@@ -1,4 +1,4 @@
-# Kubernetes Application Deployment with Monitoring
+# Part 2 : Kubernetes Application Deployment with Monitoring
 Welcome to this interactive guide! This project demonstrates how to deploy a sample application using Helm charts on a Kubernetes cluster (Minikube) and implement basic monitoring with Prometheus and Grafana.
 
 ## Project Objectives
