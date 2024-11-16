@@ -89,7 +89,7 @@
 3. Install **Helm**: [Helm Installation Guide](https://helm.sh/docs/intro/install/)
 
 ---
-# Comprehensive Solution: Application and Infrastructure Deployment
+
 
 ## Deliverables
 
